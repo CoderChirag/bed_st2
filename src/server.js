@@ -10,7 +10,7 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import connectDB from './db/dbConfig';
 import passport from 'passport';
-import { passport as passportMiddleware } from './middlewares/passport';
+// import { passport as passportMiddleware } from './middlewares/passport';
 
 const app = express();
 
@@ -35,7 +35,7 @@ function middlewares() {
 	app.use(bodyParser.urlencoded({ extended: true }));
 	// Passport middleware
 	app.use(passport.initialize());
-	passportMiddleware;
+	// passportMiddleware;
 }
 
 app.listen(port, () => {
